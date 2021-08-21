@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temprature Convertor</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Lato:wght@300&display=swap');
+        </style>
+</head>
+<body>
+    <h1>Temprature Convertor</h1>
+    <div class="container">
+        <div class="fd"> <div class="input-div" id="a">
+            <label class="cc" for="a">Centigrate</label>
+        <input type="number" value="0" id="deg">
+        </div>
+        <div class="input-div" id="b">
+            <label class="ff" for="b"> Fahrenheit</label>
+            <input type="number" value="32" id="far">
+        </div>
+    </div>
+       
+    </div>
+
+    <script>
+        var deg=document.getElementById("deg");
+        var far=document.getElementById("far");
+
+        deg.addEventListener('input',function(){
+            let c=this.value;
+            let f=(c* 9/5)+32;
+            far.value=f; 
+
+        })
+
+        far.addEventListener('input',function(){
+            let f=this.value;
+           let c=(32*f -32) * 5/9;
+           deg.value=c;
+        })
+    </script>
+</body>
+</html>
